@@ -2,7 +2,7 @@
 Basic Sign Up Form that has rudimentary data checking
 
 
-<b>Features</b>: 
+<h2>Features</h2>: 
 Checks if all data fields have been filled in
 
 Checks if password and the password authentication fields match
