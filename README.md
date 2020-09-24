@@ -1,6 +1,7 @@
 <h1>SignUpForm</h1>
 Basic Sign Up Form that has rudimentary data checking
 
+
 <b>Features</b>: 
 Checks if all data fields have been filled in
 
