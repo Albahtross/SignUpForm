@@ -7,3 +7,4 @@ Checks if password and the password authentication fields match
 
 Displays appropriate messages on fail or success
 
+![Image of SignUpForm](https://github.com/Albahtross/SignUpForm/blob/master/signupformss.JPG)
