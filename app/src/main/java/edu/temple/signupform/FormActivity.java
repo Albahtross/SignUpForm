@@ -33,9 +33,17 @@ public class FormActivity extends AppCompatActivity {
     }
 
     void saveUserData(){
+        // Check if all fields are filled in
         if(TextUtils.isEmpty(PersonName.getText()) || TextUtils.isEmpty(EmailAddress.getText())||
                 TextUtils.isEmpty(Password.getText()) || TextUtils.isEmpty(PasswordAuth.getText())){
             Toast.makeText(this, "Not all fields have been filled out.", Toast.LENGTH_SHORT).show();
+        }
+        // Check if passwords match
+        else if (!(Password.getText().toString().equals(PasswordAuth.getText().toString()))){
+            Toast.makeText(this, "Passwords do not match.", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(this, "Welcome to the SignUp Form," + PersonName.getText().toString(), Toast.LENGTH_SHORT).show();
         }
     }
 
