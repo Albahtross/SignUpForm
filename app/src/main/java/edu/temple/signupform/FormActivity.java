@@ -11,28 +11,28 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class FormActivity extends AppCompatActivity {
-    EditText PersonName = (EditText)findViewById(R.id.PersonName);
-    EditText EmailAddress=(EditText)findViewById(R.id.EmailAddress);
-    EditText Password=(EditText)findViewById(R.id.Password);
-    EditText PasswordAuth=(EditText)findViewById(R.id.PasswordAuth);
-    Button SignUpButton= findViewById(R.id.SignUp);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final EditText PersonName = (EditText)findViewById(R.id.PersonName);
+        final EditText EmailAddress=(EditText)findViewById(R.id.EmailAddress);
+        final EditText Password=(EditText)findViewById(R.id.Password);
+        final EditText PasswordAuth=(EditText)findViewById(R.id.PasswordAuth);
+        Button SignUpButton= findViewById(R.id.SignUp);
 
 
         SignUpButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                saveUserData();
+                saveUserData(PersonName, EmailAddress, Password, PasswordAuth);
             }
         });
     }
 
-    void saveUserData(){
+    void saveUserData(EditText PersonName, EditText EmailAddress, EditText Password, EditText PasswordAuth){
         // Check if all fields are filled in
         if(TextUtils.isEmpty(PersonName.getText()) || TextUtils.isEmpty(EmailAddress.getText())||
                 TextUtils.isEmpty(Password.getText()) || TextUtils.isEmpty(PasswordAuth.getText())){
