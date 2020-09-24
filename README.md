@@ -1,4 +1,4 @@
-SignUpForm
+<h1>SignUpForm<h1>
 Basic Sign Up Form that has rudimentary data checking
 
 Features: 
